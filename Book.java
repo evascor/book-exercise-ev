@@ -54,4 +54,9 @@ class Book
         System.out.println(title);
     }
 
+    // Show all details from book
+    public void printDetails()
+    {
+        System.out.println("Title: "+title+", Author: "+author+", Pages: "+pages);
+    }
 }
