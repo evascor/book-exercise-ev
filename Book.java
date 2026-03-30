@@ -27,11 +27,23 @@ class Book
     {
         return author;
     }
-    
+
     // Return title's book
     public String getTitle()
     {
         return title;
     }
-    
+
+    // Show Author on screen
+    public void printAuthor()
+    {
+        System.out.println(author);
+    }
+
+    // Show Title on screen
+    public void printTitle()
+    {
+        System.out.println(title);
+    }
+
 }
