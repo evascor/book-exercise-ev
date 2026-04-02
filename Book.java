@@ -13,6 +13,7 @@ class Book
     private String title;
     private int pages;
     private String refNumber;
+    private int borrowed;
 
     /**
      * Set the author and title fields when this object
@@ -56,21 +57,6 @@ class Book
         System.out.println(title);
     }
 
-    // Show all details from book
-    public void printDetails()
-    {
-        System.out.println("Title: "+title);
-        System.out.println("Author: "+author);
-        System.out.println("Pages: "+pages);
-        if (refNumber.length() == 0)
-        {
-            System.out.println("ZZZ");
-        } else {
-            System.out.println("Reference number: "+refNumber);
-        }
-        System.out.println();
-    }
-
     // Define reference number
     public void setRefNumber(String ref)
     {
@@ -89,4 +75,34 @@ class Book
     {
         return refNumber;
     }
+
+    public void borrow()
+    {
+        borrowed += 1;
+        System.out.println("Thank you, enjoy your reading!");
+        printDetails();
+    }
+    
+    public int getBorrowed()
+    {
+        return borrowed;
+    }
+
+    // Show all details from book
+    public void printDetails()
+    {
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        System.out.println("Title: " + title);
+        System.out.println("Author: " + author);
+        System.out.println("Pages: " + pages);
+        if (refNumber.length() == 0)
+        {
+            System.out.println("ZZZ");
+        } else {
+            System.out.println("Reference number: " + refNumber);
+        }
+        System.out.println("This book has been borrowed: " + borrowed + " times.");
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+    }
+
 }
