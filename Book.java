@@ -74,7 +74,14 @@ class Book
     // Define reference number
     public void setRefNumber(String ref)
     {
-        refNumber = ref;
+        if (ref.length() >= 3)
+        {
+            refNumber = ref;
+        } else {
+            System.out.println("[ERROR] Invalid reference number.");
+            System.out.println("Detail: at least 3 characteres are required.");
+            System.out.println("Input received: "+ ref.length() + " characters were received.");
+        }
     }
 
     // Return reference number
